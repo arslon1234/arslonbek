@@ -11,6 +11,10 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        main: "#1F8474"
+      },
+      boxShadow: {
+        custom: '0px 5px 12.4px 0px rgba(194, 194, 194, 0.47)', 
       },
     },
   },
