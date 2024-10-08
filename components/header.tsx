@@ -32,9 +32,9 @@ const Header = () => {
           onClick={handleClick}
         >
           {open ? (
-            <Image src={close} alt="image" className="w-6 text-green-500" />
+            <Image src={close} alt="close" className="w-6 text-green-500" />
           ) : (
-            <Image src={menu} alt="image" className="w-6" />
+            <Image src={menu} alt="menu" className="w-6" />
           )}
           <span className="text-[20px] font-normal">Menu</span>
         </button>

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,6 +28,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+       <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Arslonbek Ro'ziboyev",
+              jobTitle: "Software Engineer",
+              description: "I am a software engineer with expertise in Next.js, React, and SEO optimization.",
+              url: "https://arslonbek.com",
+              sameAs: [
+                "https://www.linkedin.com/in/arslonbekroziboyev/",
+                "https://github.com/arslon1234"
+              ],
+              image: "/static/arslonbek-image.png"
+            }),
+          }}
+        />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col h-screen justify-between`}
       >
