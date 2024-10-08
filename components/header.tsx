@@ -14,6 +14,7 @@ const Header = () => {
   const pathname = usePathname();
 
   const links: ILinks[] = [
+    { title: "About", path: "/about" },
     { title: "Blog", path: "/blog" },
     { title: "Portfolio", path: "/portfolio" },
     { title: "Contact", path: "/contact" },

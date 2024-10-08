@@ -1,5 +1,6 @@
 // import Image from "next/image";
 import Head from "next/head";
+import HomePage from "@/components/home";
 export default function Home() {
   return (
     <>
@@ -24,9 +25,9 @@ export default function Home() {
         <meta property="og:image" content="/static/awesome-image.png" />
         <meta property="og:url" content="https://arslonbek.com" />
       </Head>
-      <div>
-        <h1 className="text-center">Welcome to My Awesome Site!</h1>
-      </div>
+      <>
+        <HomePage/>
+      </>
     </>
   );
 }
