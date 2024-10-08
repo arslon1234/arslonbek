@@ -11,11 +11,16 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        main: "#1F8474"
+        main: "#1F8474",
+        desc_color: "#7A7A7A"
       },
       boxShadow: {
         custom: '0px 5px 12.4px 0px rgba(194, 194, 194, 0.47)', 
       },
+      fontSize:{
+        name_size: "20px",
+        desc_size: "15px"
+      }
     },
   },
   plugins: [],
