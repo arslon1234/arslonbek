@@ -28,38 +28,42 @@ const Header = () => {
       </Link>
       <div className="relative flex flex-col items-center">
         <button
-          className="py-1 px-6 flex items-center gap-2 border border-[#ccc] rounded-3xl"
+          className="py-1 px-6 flex items-center cursor-pointer gap-2 border border-[#ccc] rounded-3xl z-20"
           onClick={handleClick}
         >
-          {open ? (
-            <Image src={close} alt="close" className="w-6 text-green-500" />
-          ) : (
-            <Image src={menu} alt="menu" className="w-6" />
-          )}
-          <span className="text-[20px] font-normal">Menu</span>
+          <Image
+            src={open ? close : menu}
+            alt={open ? "close" : "menu"}
+            className={`w-6 cursor-pointer transition-transform duration-500 ${
+              open ? "rotate-90" : "rotate-0"
+            }`}
+          />
+          <span className="text-[20px] font-normal cursor-pointer">Menu</span>
         </button>
-        {open && (
-          <section className="absolute top-11 shadow-custom p-2 px-6 rounded-3xl">
-            <div className="flex gap-6">
-              {links.map((link, index) => {
-                const isActive = pathname === link.path;
-                return (
-                  <Link
-                    href={link.path}
-                    className={
-                      isActive
-                        ? "text-main font-bold cursor-pointer"
-                        : "cursor-pointer"
-                    }
-                    key={index}
-                  >
-                    {link.title}
-                  </Link>
-                );
-              })}
-            </div>
-          </section>
-        )}
+        <section
+          className={`absolute top-11 shadow-custom p-2 px-6 rounded-3xl transition-all duration-500 ease-in-out ${
+            open ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5 pointer-events-none'
+          }`}
+        >
+          <div className="flex gap-6">
+            {links.map((link, index) => {
+              const isActive = pathname === link.path;
+              return (
+                <Link
+                  href={link.path}
+                  className={`${
+                    isActive
+                      ? "text-main cursor-pointer font-semibold"
+                      : "cursor-pointer font-semibold"
+                  } transition-transform duration-500 hover:scale-105`}
+                  key={index}
+                >
+                  {link.title}
+                </Link>
+              );
+            })}
+          </div>
+        </section>
       </div>
       <button
         type="submit"
