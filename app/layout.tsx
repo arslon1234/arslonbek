@@ -18,7 +18,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "About me",
+  title: "Arslonbek's Blog",
   description: "Arslonbek Ro'ziboyev",
 };
 
