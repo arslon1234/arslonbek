@@ -1,9 +1,18 @@
+"use client"
 import Image from 'next/image'
 import React from 'react'
 import img from '@/assets/portfolio.jpg'
 import Link from 'next/link'
 const Page = () => {
     const values = ["React", "React-query", "Ant design"]
+    const others = [
+        {image: img},
+        {image: img},
+        {image: img},
+    ]
+    const nextPage =()=>{
+        // move next page
+    }
   return (
     <section>
       <Image src={img} alt='img' className='w-full h-[350px] rounded-3xl object-cover'/>
@@ -24,6 +33,19 @@ const Page = () => {
         }
         </div>
       </div>
+      <aside className='mt-16 flex flex-col gap-5'>
+        <h3 className='text-center text-[22px] font-bold'>Other Projects</h3>
+        <div className='grid grid-cols-[auto_auto_auto] gap-5'>
+            {
+                others.map((item,index)=>(
+                    <Image src={item.image} className='rounded-3xl h-[250px] object-cover' alt='img' key={index}/>
+                ))
+            }
+        </div>
+        <div className='flex justify-center'>
+        <button className='px-5 py-3 block rounded-3xl border border-[#D7D7D7]' onClick={nextPage}>View more</button>
+        </div>
+      </aside>
     </section>
   )
 }
