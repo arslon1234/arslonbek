@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import me from '@/assets/me.jpeg'
+import Link from 'next/link'
 function Home() {
     return (
         <section className='w-full flex justify-center gap-5 flex-col items-center bg-[#F6F6F6] rounded-3xl py-9'>
@@ -14,8 +15,8 @@ function Home() {
                 </p>
             </div>
             <div className='flex justify-center gap-2'>
-                <button className='py-3 px-7 rounded-3xl hover:shadow-lg bg-black text-white'>About me</button>
-                <button className='py-3 px-7 rounded-3xl hover:shadow-md bg-white text-black'>Portfolio</button>
+                <Link href='/about' className='py-3 px-7 rounded-3xl hover:shadow-lg bg-black text-white'>About me</Link>
+                <Link href='/portfolio' className='py-3 px-7 rounded-3xl hover:shadow-md bg-white text-black'>Portfolio</Link>
             </div>
         </section>
     )

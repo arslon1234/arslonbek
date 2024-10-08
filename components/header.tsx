@@ -66,12 +66,14 @@ const Header = () => {
           </div>
         </section>
       </div>
-      <button
-        type="submit"
+      <Link 
+         href="https://t.me/developer_0220"
+         target="_blank"
+         rel="noopener noreferrer"
         className="py-3 px-4 text-white bg-black rounded-[33px]"
       >
         Get in touch
-      </button>
+      </Link>
     </header>
   );
 };
