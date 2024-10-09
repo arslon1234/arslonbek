@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import me from '@/assets/me.jpeg'
+import me from '@/assets/me.png'
 import Link from 'next/link'
 function Home() {
     return (
