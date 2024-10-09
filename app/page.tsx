@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Welcome to Arslonbek Ro'ziboyev's personal portfolio. Learn more about my projects, experience, and skills.",
   keywords:
-    "Arslonbek Ro'ziboyev, Personal Portfolio, Web Developer, Next.js, React.js, Vue.js, Nuxt.js, SEO, Software Engineer",
+    "Arslonbek Ro'ziboyev, arslonbek, arslon, Personal Portfolio, Web Developer, Next.js, React.js, Vue.js, Nuxt.js, SEO, Software Engineer",
   openGraph: {
     title: "Arslonbek Ro'ziboyev - Personal Portfolio",
     description:
