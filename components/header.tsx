@@ -5,10 +5,12 @@ import { usePathname } from "next/navigation";
 import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
 import Image from "next/image";
+
 interface ILinks {
   title: string;
   path: string;
 }
+
 const Header = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -19,15 +21,20 @@ const Header = () => {
     { title: "Portfolio", path: "/portfolio" },
     { title: "Contact", path: "/contact" },
   ];
+
   const handleClick = () => {
     setOpen(!open);
   };
+
   return (
-    <header className="flex justify-between items-center my-3 px-10 py-3">
+    <header className="flex justify-between items-center my-3 px-4 py-3 md:px-10">
+      {/* Logo */}
       <Link href="/" className="text-[25px] font-bold">
         Arslonbek
       </Link>
-      <div className="relative flex flex-col items-center">
+
+      {/* Mobile Menu Button */}
+      <div className="md:hidden relative flex items-center">
         <button
           className="py-1 px-6 flex items-center cursor-pointer gap-2 border border-[#ccc] rounded-3xl z-20"
           onClick={handleClick}
@@ -41,12 +48,14 @@ const Header = () => {
           />
           <span className="text-[20px] font-normal cursor-pointer">Menu</span>
         </button>
+
+        {/* Mobile Menu Links */}
         <section
-          className={`absolute top-11 shadow-custom p-2 px-6 rounded-3xl transition-all duration-500 ease-in-out ${
-            open ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5 pointer-events-none'
+          className={`absolute z-30 top-11 shadow-custom p-2 px-6 rounded-3xl bg-white transition-all duration-500 ease-in-out ${
+            open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5 pointer-events-none"
           }`}
         >
-          <div className="flex gap-6">
+          <div className="flex flex-col gap-4">
             {links.map((link, index) => {
               const isActive = pathname === link.path;
               return (
@@ -66,11 +75,33 @@ const Header = () => {
           </div>
         </section>
       </div>
-      <Link 
-         href="https://t.me/developer_0220"
-         target="_blank"
-         rel="noopener noreferrer"
-        className="py-3 px-4 text-white bg-black rounded-[33px]"
+
+      {/* Desktop Menu Links */}
+      <div className="hidden md:flex gap-6">
+        {links.map((link, index) => {
+          const isActive = pathname === link.path;
+          return (
+            <Link
+              href={link.path}
+              className={`${
+                isActive
+                  ? "text-main cursor-pointer font-semibold"
+                  : "cursor-pointer font-semibold"
+              } transition-transform duration-500 hover:scale-105`}
+              key={index}
+            >
+              {link.title}
+            </Link>
+          );
+        })}
+      </div>
+
+      {/* Get in touch button */}
+      <Link
+        href="https://t.me/developer_0220"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="py-3 px-4 text-white bg-black rounded-[33px] hidden md:block"
       >
         Get in touch
       </Link>

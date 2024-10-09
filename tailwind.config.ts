@@ -18,7 +18,7 @@ const config: Config = {
         custom: '0px 5px 12.4px 0px rgba(194, 194, 194, 0.47)', 
       },
       fontSize:{
-        name_size: "20px",
+        name_size: "25px",
         desc_size: "15px"
       }
     },
