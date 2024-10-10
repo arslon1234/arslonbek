@@ -46,7 +46,7 @@ const Header = () => {
             open ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5 pointer-events-none'
           }`}
         >
-          <div className="flex flex-col md:flex-row gap-6 ">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6 ">
             {links.map((link, index) => {
               const isActive = pathname === link.path;
               return (
