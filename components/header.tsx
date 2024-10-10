@@ -29,17 +29,17 @@ const Header = () => {
       </Link>
       <div className="relative flex flex-col items-center">
         <button
-          className="py-1 px-6 flex items-center cursor-pointer gap-2 border border-[#ccc] rounded-3xl z-20"
+          className="py-1 px-4 md:px-6 flex items-center cursor-pointer gap-2 border border-[#ccc] rounded-3xl z-20"
           onClick={handleClick}
         >
           <Image
             src={open ? close : menu}
             alt={open ? "close" : "menu"}
-            className={`w-6 cursor-pointer transition-transform duration-500 ${
+            className={`w-5 md:w-6 cursor-pointer transition-transform duration-500 ${
               open ? "rotate-90" : "rotate-0"
             }`}
           />
-          <span className="text-[20px] font-normal cursor-pointer">Menu</span>
+          <span className="text-[18px] md:text-[20px] font-normal cursor-pointer">Menu</span>
         </button>
         <section
           className={`absolute top-11 z-10 shadow-custom bg-white md:bg-transparent p-2 px-6 rounded-3xl transition-all duration-500 ease-in-out ${
