@@ -1,5 +1,9 @@
 import React from 'react'
-
+import { SlSocialLinkedin } from "react-icons/sl";
+import { FiGithub } from "react-icons/fi";
+import { BsInstagram } from "react-icons/bs";
+import { PiTelegramLogo } from "react-icons/pi";
+import Link from 'next/link';
 const Contact = () => {
   return (
     <section className='flex flex-col gap-5'>
@@ -10,15 +14,19 @@ const Contact = () => {
       A passionate web developer with a keen eye for design and a love for creating intuitive user experiences.
       </p>
       </div>
-      <div className='flex gap-2 justify-center'>
-        <aside className='w-[40px] h-[40px] rounded-[50%] bg-black'>
-        </aside>
-        <aside className='w-[40px] h-[40px] rounded-[50%] bg-black'>
-        </aside>
-        <aside className='w-[40px] h-[40px] rounded-[50%] bg-black'>
-        </aside>
-        <aside className='w-[40px] h-[40px] rounded-[50%] bg-black'>
-        </aside>
+      <div className='flex gap-3 justify-center'>
+        <Link href='https://www.linkedin.com/in/arslonbekroziboyev/' target='_blank' className='cursor-pointer w-[42px] h-[42px] flex items-center justify-center rounded-[50%] bg-black'>
+          <SlSocialLinkedin className='text-white text-[21px]'/>
+        </Link>
+        <Link href='https://github.com/arslon1234' target='_blank' className='cursor-pointer w-[42px] h-[42px] flex items-center justify-center rounded-[50%] bg-black'>
+          <FiGithub className='text-white text-[21px]'/>
+        </Link>
+        <Link href="https://www.instagram.com/arslonbek0220/" target='_blank' className='cursor-pointer w-[42px] h-[42px] flex items-center justify-center rounded-[50%] bg-black'>
+          <BsInstagram className='text-white text-[21px]'/>
+        </Link>
+        <Link href="https://t.me/developer_0220" target='_blank' className='cursor-pointer w-[42px] h-[42px] flex items-center justify-center rounded-[50%] bg-black'>
+          <PiTelegramLogo className='text-white text-[21px]'/>
+        </Link>
       </div>
     </div>
     <div className='flex gap-5'>

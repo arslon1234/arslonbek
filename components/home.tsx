@@ -15,7 +15,7 @@ function Home() {
       }, []);
     return (
         <section className='w-full flex justify-center gap-5 flex-col items-center bg-[#F6F6F6] rounded-3xl py-9 px-4 md:px-8 lg:px-16'>
-            <div data-aos="zoom-in" className='w-[180px] h-[180px] md:w-[252px] md:h-[252px] rounded-[50%] bg-main flex items-center justify-center'>
+            <div data-aos="zoom-in" className='w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-[50%] bg-main flex items-center justify-center'>
                 <Image src={me} alt='arslonbek' className='w-full h-full rounded-[50%] object-cover' />
             </div>
             <div data-aos="zoom-out" className='max-w-[506px] flex flex-col gap-2 text-center'>
@@ -25,8 +25,8 @@ function Home() {
                 </p>
             </div>
             <div className='flex flex-col md:flex-row justify-center gap-2'>
-                <Link href='/about' data-aos="fade-up" className='py-3 px-7 rounded-3xl hover:shadow-lg bg-black text-white'>About me</Link>
-                <Link href='/portfolio' data-aos="fade-up" className='py-3 px-7 rounded-3xl hover:shadow-md bg-white text-black'>Portfolio</Link>
+                <Link href='/about' data-aos="fade-right" className='py-3 px-7 rounded-3xl hover:shadow-lg bg-black text-white'>About me</Link>
+                <Link href='/blog' data-aos="fade-left" className='py-3 px-7 rounded-3xl hover:shadow-md bg-white text-black'>Read blog</Link>
             </div>
         </section>
     )

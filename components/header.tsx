@@ -16,7 +16,7 @@ const Header = () => {
   const links: ILinks[] = [
     { title: "About", path: "/about" },
     { title: "Blog", path: "/blog" },
-    { title: "Portfolio", path: "/portfolio" },
+    // { title: "Portfolio", path: "/portfolio" },
     { title: "Contact", path: "/contact" },
   ];
   const handleClick = () => {
