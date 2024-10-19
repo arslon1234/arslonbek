@@ -23,7 +23,7 @@ const Header = () => {
     setOpen(!open);
   };
   return (
-    <header className="flex justify-between items-center my-3 px-4 md:px-10 py-3">
+    <header className="flex justify-between items-center my-3 px-4 md:px-16 lg:px-28 py-3">
       <Link href="/" className="text-[25px] font-bold">
         Arslonbek
       </Link>

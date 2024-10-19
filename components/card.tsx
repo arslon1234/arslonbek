@@ -1,18 +1,20 @@
 "use client"
-import Image, { StaticImageData } from "next/image"
-import { useRouter } from 'next/navigation'
-import { useEffect } from 'react';
+// import { useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
-interface PropType {
-   item:{
-    name: string,
-    description: string,
-    img: StaticImageData
-   },
-   key: number
-}
-const BlogCard = ({item,key}:PropType) => {
-  const {push} = useRouter()
+import { IoBookOutline } from "react-icons/io5";
+// import { BiSolidLock } from "react-icons/bi";
+import { LiaHandPointer } from "react-icons/lia";
+// interface PropType {
+//    item:{
+//     name: string,
+//     description: string,
+//    },
+//    key: number
+// }
+const BlogCard = () => {
+  // const {push} = useRouter()
+  const [count] = useState(2)
   useEffect(() => {
         AOS.init({
           duration: 800,  
@@ -20,11 +22,24 @@ const BlogCard = ({item,key}:PropType) => {
         });
       }, []);
   return (
-    <section  className="w-1/2 flex flex-col gap-3 cursor-pointer" key={key} onClick={()=>push(`/blog/1`)}>
-        <Image src={item.img} alt="blog-img" className="w-full h-[280px] rounded-3xl object-cover"/>
-        <h3 className="text-name_size font-bold">{item.name}</h3>
-        <span className="text-desc_size text-desc_color">{item.description}</span>
-    </section>
+    <section className="relative flex items-center justify-between cursor-pointer py-4 border-b-[1px] border-[#999] hover:border-b-[1.6px] hover:border-[#000] group">
+  <div className="flex items-center gap-2">
+    <IoBookOutline />
+    <p className="text-[16px] font-normal">Metadan offer oldim</p>
+  </div>
+  <div className="flex items-center relative">
+    <span className="italic text-[13px] text-[#6e6e6e] transition-transform duration-300 ease-in-out group-hover:-translate-x-4">
+      September 26, 2024
+    </span>
+    {count % 2 === 0 ? (
+      <LiaHandPointer className="ml-2 text-[20px] opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 rotate-[50deg]" />
+    ) : (
+      <span className="absolute left-full ml-2 px-2 py-1 text-white bg-black whitespace-nowrap rounded-lg opacity-0 transform translate-x-2 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:translate-x-0">
+        Coming soon
+      </span>
+    )}
+  </div>
+</section>
   )
 }
 
