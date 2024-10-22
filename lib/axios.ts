@@ -1,6 +1,6 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL: "http://3.68.219.212:3000/api"
+    baseURL: "https://xamidulloxu-blog-app-10.deno.dev/api"
 })
 export default axiosInstance
