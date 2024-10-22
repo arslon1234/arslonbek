@@ -29,21 +29,22 @@ const Contact = () => {
         </Link>
       </div>
     </div>
-    <div className='flex gap-5'>
-    <div className='w-[50%] flex flex-col items-center gap-3 py-6 md:py-9 bg-black rounded-2xl md:rounded-3xl'>
+    {/* <div className='flex flex-col md:flex-row gap-5'>
+    <div className='w-full md:w-[50%] flex flex-col items-center justify-center gap-3 py-6 bg-black rounded-2xl md:rounded-3xl'>
     <h2 className='text-center text-white font-bold text-[22px]'>Contact information</h2>
     <p className='text-[#BCBCBC]'>+998 95 019 24 69</p>
     <p className='text-[#BCBCBC]'>Tashkent, Uzbekistan</p>
     <p className='text-[#BCBCBC]'>roziboyevarslon0110@gmail.com</p>
     </div>
-    <div className='w-[50%] flex flex-col items-center gap-3 px-8 md:px-10 py-6 md:py-9 bg-main rounded-2xl md:rounded-3xl'>
+    <div className='w-full md:w-[50%] flex flex-col items-center gap-3 px-6 md:px-8 py-6 bg-main rounded-2xl md:rounded-3xl'>
       <h3 className='text-center text-white text-[22px] font-bold'>Feedback</h3>
     <form className='w-full flex flex-col items-center gap-3'>
-      <input type="text" placeholder='Email' className='w-full py-[10px] px-4 rounded-[27px] outline-none text-[#7A7A7A]'/>
+      <input type="text" name='email' placeholder='Email' className='w-full py-[10px] px-4 rounded-[20px] outline-none text-[#7A7A7A]'/>
+      <textarea name="feedback" placeholder='Write your feedback...' className='w-full h-32 py-[10px] px-4 rounded-[20px] outline-none text-[#7A7A7A]'></textarea>
       <button type='submit' className='w-[200px] bg-black text-white py-3 rounded-3xl'>Send</button>
     </form>
     </div>
-    </div>
+    </div> */}
     </section>
   )
 }

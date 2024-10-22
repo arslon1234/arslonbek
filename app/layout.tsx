@@ -53,7 +53,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col h-screen justify-between`}
       >
        <Header/>
-        <main className="container mx-auto py-6 px-4 md:px-16 lg:px-52 flex-1">
+        <main className="container mx-auto py-6 px-4 md:px-16 lg:px-56 flex-1">
         {children}
         </main>
         <Footer/>
