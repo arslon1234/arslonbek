@@ -17,13 +17,13 @@ const Header = () => {
     { title: "About", path: "/about" },
     { title: "Blog", path: "/blog" },
     { title: "Portfolio", path: "/portfolio" },
-    { title: "Contact", path: "/contact" },
+    // { title: "Contact", path: "/contact" },
   ];
   const handleClick = () => {
     setOpen(!open);
   };
   return (
-    <header className="flex justify-between items-center my-3 px-4 md:px-10 py-3">
+    <header className="flex justify-between items-center my-3 px-4 md:px-8 py-3">
       <Link href="/" className="text-[25px] font-bold">
         Arslonbek
       </Link>
@@ -66,7 +66,6 @@ const Header = () => {
           </div>
         </section>
       </div>
-      
       <Link 
          href="https://t.me/developer_0220"
          target="_blank"
