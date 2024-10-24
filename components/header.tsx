@@ -17,7 +17,6 @@ const Header = () => {
     { title: "About", path: "/about" },
     { title: "Blog", path: "/blog" },
     { title: "Portfolio", path: "/portfolio" },
-    // { title: "Contact", path: "/contact" },
   ];
   const handleClick = () => {
     setOpen(!open);
