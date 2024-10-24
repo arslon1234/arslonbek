@@ -5,6 +5,7 @@ import "./globals.css";
 const Header = dynamic(() => import('../components/header'));
 const Footer = dynamic(() => import('../components/footer'));
 import Head from "next/head";
+import ReactQueryProvider from './providers/ReactQueryProvider';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -52,11 +53,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col h-screen justify-between`}
       >
+         <ReactQueryProvider>
        <Header/>
         <main className="container mx-auto py-6 px-4 md:px-16 lg:px-56 flex-1">
         {children}
         </main>
         <Footer/>
+         </ReactQueryProvider>
       </body>
     </html>
   );
