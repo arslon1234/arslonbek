@@ -5,7 +5,7 @@ import BlogCard from '@/components/card'
 import { getBlog } from '@/lib/blog';
 const Blog = () => {
   const { data} = useQuery({
-    queryKey: ['posts'], 
+    queryKey: ['blog'], 
     queryFn: getBlog,  
   });
   return (

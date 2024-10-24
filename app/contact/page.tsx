@@ -50,38 +50,3 @@
 // }
 
 // export default Contact
-"use client"
-
-
-import { useQuery } from '@tanstack/react-query';
-
-interface Post {
-  id: number;
-  title: string;
-}
-
-const fetchPosts = async (): Promise<Post[]> => {
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-  if (!response.ok) {
-    throw new Error('Network response was not ok');
-  }
-  return response.json();
-};
-
-export default function Posts() {
-  const { data, error, isLoading } = useQuery({
-    queryKey: ['posts'], // Correct usage of queryKey as an object
-    queryFn: fetchPosts,  // query function passed as a key
-  });
-
-  if (isLoading) return <div>Loading...</div>;
-  if (error instanceof Error) return <div>Error: {error.message}</div>;
-
-  return (
-    <ul>
-      {data?.map(post => (
-        <li key={post.id}>{post.title}</li>
-      ))}
-    </ul>
-  );
-}
