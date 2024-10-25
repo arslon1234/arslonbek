@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 import localFont from "next/font/local";
+import { Suspense } from "react";
 import "./globals.css";
-const Header = dynamic(() => import('../components/header'));
-const Footer = dynamic(() => import('../components/footer'));
+const Header = dynamic(() => import("../components/header"));
+const Footer = dynamic(() => import("../components/footer"));
 import Head from "next/head";
-import ReactQueryProvider from './providers/ReactQueryProvider';
+import ReactQueryProvider from "./providers/ReactQueryProvider";
+import Loading from "./loading";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <Head>
+      <Head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -39,13 +41,14 @@ export default function RootLayout({
               "@type": "Person",
               name: "Arslonbek Ro'ziboyev",
               jobTitle: "Software Engineer",
-              description: "I am a software engineer with expertise in Next.js, React, and SEO optimization.",
+              description:
+                "I am a software engineer with expertise in Next.js, React, and SEO optimization.",
               url: "https://arslonbek.com",
               sameAs: [
                 "https://www.linkedin.com/in/arslonbekroziboyev/",
-                "https://github.com/arslon1234"
+                "https://github.com/arslon1234",
               ],
-              image: "/static/arslonbek-image.png"
+              image: "/static/arslonbek-image.png",
             }),
           }}
         />
@@ -53,13 +56,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col h-screen justify-between`}
       >
-         <ReactQueryProvider>
-       <Header/>
-        <main className="container mx-auto py-6 px-4 md:px-16 lg:px-56 flex-1">
-        {children}
-        </main>
-        <Footer/>
-         </ReactQueryProvider>
+        <ReactQueryProvider>
+          <Suspense fallback={<Loading />}>
+            <Header />
+            <main className="container mx-auto py-6 px-4 md:px-16 lg:px-56 flex-1">
+              {children}
+            </main>
+            <Footer />
+          </Suspense>
+        </ReactQueryProvider>
       </body>
     </html>
   );
