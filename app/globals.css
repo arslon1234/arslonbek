@@ -1,3 +1,5 @@
+@import 'prismjs/themes/prism-coy.css';
+/* @import 'prismjs/themes/prism.css'; */
 @import "aos/dist/aos.css";
 @tailwind base;
 @tailwind components;

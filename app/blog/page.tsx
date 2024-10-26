@@ -1,16 +1,11 @@
-// "use client"
-// import { useQuery } from '@tanstack/react-query';
 import React from 'react'
 import BlogCard from '@/components/card'
-// import { getBlog } from '@/lib/blog';
-// import axiosInstance from '@/lib/axios';
 const Blog = async () => {
-  const data = await fetch("https://xamidulloxu-blog-app-10.deno.dev/api/blogs") 
+  const data = await fetch("https://texnoark.uz/api/titles/",{
+  cache: 'no-store',  // Disable caching
+}) 
   const blog = await data.json()
-  // const { data} = useQuery({
-  //   queryKey: ['blog'], 
-  //   queryFn: getBlog,  
-  // });
+  console.log(blog)
   return (
     <article>
       <h1 className="text-center text-[20px] font-bold mb-4">Blog</h1>

@@ -1,10 +1,11 @@
 "use client"
-import React from "react";
+import React, { useEffect } from "react";
 import portfolioImg from "@/assets/portfolio.jpg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import axios from "axios";
 const Page = () => {
-    const {push} = useRouter()
+  const {push} = useRouter()
   const users = [
     { image: portfolioImg },
     { image: portfolioImg },
@@ -18,6 +19,9 @@ const Page = () => {
   const handleClick =(id:number)=>{
     push(`/portfolio/${id}`)
   }
+  useEffect(()=>{
+    axios.get("https://texnoark.uz/api/titles")
+  },[])
   return (
     <section>
       <h1 className="text-center text-[20px] font-bold mb-4">Portfolio</h1>
