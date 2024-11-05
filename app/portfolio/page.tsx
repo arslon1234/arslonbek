@@ -1,31 +1,31 @@
 "use client"
-import React, { useEffect } from "react";
-import portfolioImg from "@/assets/portfolio.jpg";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import axios from "axios";
+// import React, { useEffect } from "react";
+// import portfolioImg from "@/assets/portfolio.jpg";
+// import Image from "next/image";
+// import { useRouter } from "next/navigation";
+// import axios from "axios";
 const Page = () => {
-  const {push} = useRouter()
-  const users = [
-    { image: portfolioImg },
-    { image: portfolioImg },
-    { image: portfolioImg },
-    { image: portfolioImg },
-    { image: portfolioImg },
-    { image: portfolioImg },
-    { image: portfolioImg },
-    { image: portfolioImg },
-  ];
-  const handleClick =(id:number)=>{
-    push(`/portfolio/${id}`)
-  }
-  useEffect(()=>{
-    axios.get("https://texnoark.uz/api/titles")
-  },[])
+  // const {push} = useRouter()
+  // const users = [
+  //   { image: portfolioImg },
+  //   { image: portfolioImg },
+  //   { image: portfolioImg },
+  //   { image: portfolioImg },
+  //   { image: portfolioImg },
+  //   { image: portfolioImg },
+  //   { image: portfolioImg },
+  //   { image: portfolioImg },
+  // ];
+  // const handleClick =(id:number)=>{
+  //   push(`/portfolio/${id}`)
+  // }
+  // useEffect(()=>{
+  //   axios.get("https://texnoark.uz/api/titles")
+  // },[])
   return (
     <section>
-      <h1 className="text-center text-[20px] font-bold mb-4">Portfolio</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <h1 className="text-center text-[20px] font-bold mb-4">Cooming soon...</h1>
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
       {users.map((user, index) => (
         <div
           key={index}
@@ -48,7 +48,7 @@ const Page = () => {
           )}
         </div>
       ))}
-    </div>
+    </div> */}
     </section>
   );
 };

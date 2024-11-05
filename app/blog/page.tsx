@@ -4,7 +4,7 @@ const Blog = async () => {
   const data = await fetch("https://texnoark.uz/api/titles/",{
   cache: 'no-store',  // Disable caching
 }) 
-  const blog = await data.json()
+  const blog = await data?.json()
   console.log(blog)
   return (
     <article>
