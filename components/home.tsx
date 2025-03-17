@@ -9,6 +9,7 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { FiGithub } from "react-icons/fi";
 import { BsInstagram } from "react-icons/bs";
 import { PiTelegramLogo } from "react-icons/pi";
+import { TbBrandLeetcode } from "react-icons/tb";
 function Home() {
   useEffect(() => {
     AOS.init({
@@ -42,30 +43,37 @@ function Home() {
           <Link
             href="https://www.linkedin.com/in/arslonbekroziboyev/"
             target="_blank"
-            className="cursor-pointer w-[32px] h-[32px] flex items-center justify-center rounded-[50%] bg-black"
+            className="cursor-pointer w-[35px] h-[35px] flex items-center justify-center rounded-[50%] bg-black"
           >
-            <SlSocialLinkedin className="text-white text-[18px]" />
+            <SlSocialLinkedin className="text-white text-[22px]" />
           </Link>
           <Link
             href="https://github.com/arslon1234"
             target="_blank"
-            className="cursor-pointer w-[32px] h-[32px] flex items-center justify-center rounded-[50%] bg-black"
+            className="cursor-pointer w-[35px] h-[35px] flex items-center justify-center rounded-[50%] bg-black"
           >
-            <FiGithub className="text-white text-[21px]" />
+            <FiGithub className="text-white text-[22px]" />
           </Link>
           <Link
             href="https://www.instagram.com/arslonbek0220/"
             target="_blank"
-            className="cursor-pointer w-[32px] h-[32px] flex items-center justify-center rounded-[50%] bg-black"
+            className="cursor-pointer w-[35px] h-[35px] flex items-center justify-center rounded-[50%] bg-black"
           >
-            <BsInstagram className="text-white text-[18px]" />
+            <BsInstagram className="text-white text-[22px]" />
+          </Link>
+          <Link
+            href="https://leetcode.com/u/roziboyevarslon0110/"
+            target="_blank"
+            className="cursor-pointer w-[35px] h-[35px] flex items-center justify-center rounded-[50%] bg-black"
+          >
+            <TbBrandLeetcode className="text-white text-[22px]" />
           </Link>
           <Link
             href="https://t.me/developer_0220"
             target="_blank"
-            className="cursor-pointer w-[32px] h-[32px] flex items-center justify-center rounded-[50%] bg-black"
+            className="cursor-pointer w-[35px] h-[35px] flex items-center justify-center rounded-[50%] bg-black"
           >
-            <PiTelegramLogo className="text-white text-[18px]" />
+            <PiTelegramLogo className="text-white text-[22px]" />
           </Link>
         </div>
       </div>
