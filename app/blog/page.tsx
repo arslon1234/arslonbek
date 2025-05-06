@@ -1,7 +1,7 @@
 import React from 'react'
 import BlogCard from '@/components/card'
 const Blog = async () => {
-  const data = await fetch("https://texnoark.uz/api/titles/",{
+  const data = await fetch("https://blog.arxsolution.uz/api/titles",{
   cache: 'no-store',  // Disable caching
 }) 
   const blog = await data?.json()

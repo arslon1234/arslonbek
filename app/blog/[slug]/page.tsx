@@ -22,7 +22,7 @@ const Article = ({ params }: PageProps) => {
   // Blog ma'lumotlarini yuklash
   useEffect(() => {
     const fetchBlog = async () => {
-      const data = await fetch(`https://texnoark.uz/api/blogs/${slug}`, {
+      const data = await fetch(`https://blog.arxsolution.uz/api/blogs/${slug}`, {
         cache: 'no-store',
       });
       const blogData = await data.json();
